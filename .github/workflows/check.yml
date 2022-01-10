@@ -40,21 +40,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-go@v2
-      with:
-        stable: 'false'
-        go-version: '^1.17' # The Go version to download (if necessary) and use.
-    - run: go version
-
-    - name: Install dependencies
-      run: |
-        go version
-        go get -u golang.org/x/lint/golint
-
-    - name: Run vet
-      run: |
-        go vet .
+    - name: Download all workflow run artifacts
+      uses: actions/download-artifact@v2
     
     - name: Run testing
       run: go test -v
