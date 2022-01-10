@@ -19,7 +19,7 @@ jobs:
         go version
         go get -u golang.org/x/lint/golint
     
-    - name: Run testing
+    - name: Run build
       run: go build -o gutenberg-downloader .
 
     - name: Release
