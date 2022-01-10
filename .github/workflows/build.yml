@@ -36,19 +36,4 @@ jobs:
         with:
           name: ${{ matrix.target }}_${{ matrix.arch }}
           path: gutenberg-downloader_*
-  release:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v2
-    - name: move artifacts
-      run: |
-        mkdir release
-        for d in */ ; do
-          mv $d/* release
-        done
-
-    - name: Run testing
-      run: |
-        ls release
+          retention-days: 1
