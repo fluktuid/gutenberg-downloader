@@ -44,4 +44,10 @@ jobs:
       uses: actions/download-artifact@v2
     
     - name: Run testing
-      run: ls
+      run: |
+        ls darwin_amd64
+        ls darwin_arm64
+        ls linux_amd64
+        ls linux_arm64
+        ls windows_amd64
+        ls windows_arm64
