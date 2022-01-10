@@ -47,7 +47,7 @@ jobs:
       run: |
         mkdir release
         for d in */ ; do
-          if [[ "$d" == "release*" ]]; then continue; fi
+          if [[ "$d" == "release/" ]]; then continue; fi
           mv ${d}* release
         done
     - name: Release
