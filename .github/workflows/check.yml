@@ -1,0 +1,24 @@
+name: check
+on: [push]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-go@v2
+      with:
+        stable: 'false'
+        go-version: '^1.17' # The Go version to download (if necessary) and use.
+    - run: go version
+
+    - name: Install dependencies
+      run: |
+        go version
+        go get -u golang.org/x/lint/golint
+
+    - name: Run vet
+      run: |
+        go vet .
+    
+    - name: Run testing
+      run: go test -v
