@@ -37,6 +37,7 @@ jobs:
           name: ${{ matrix.target }}_${{ matrix.arch }}
           path: gutenberg-downloader_*
   release:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
