@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  check:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -28,9 +28,3 @@ jobs:
           GOOS: ${{ matrix.target }}
           GOARCH: ${{ matrix.arch }}
         run: go build -o gutenberg-downloader .
-
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: gutenberg-downloader
