@@ -19,4 +19,6 @@ const (
 	BASE_PATH    = BASE_ROBOT + BASE_HARVEST
 	BASE_ROBOT   = "/robot"
 	BASE_HARVEST = "/harvest"
+	CATALOG_PATH = "/cache/epub/feeds"
+	CATALOG_FILE = "/pg_catalog.csv.gz"
 )
