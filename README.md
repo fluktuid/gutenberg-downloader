@@ -3,11 +3,12 @@
 
 A brief description of what this project does and who it's for
 
-Add badges from somewhere like: [shields.io](https://shields.io/)
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![Go Report Card](https://goreportcard.com/badge/github.com/fluktuid/gutenberg-downloader)](https://goreportcard.com/report/github.com/fluktuid/gutenberg-downloader)
+[![Go Reference](https://pkg.go.dev/badge/github.com/fluktuid/gutenberg-downloader.svg)](https://pkg.go.dev/github.com/fluktuid/gutenberg-downloader)
+![test](https://github.com/fluktuid/gutenberg-downloader/actions/workflows/check.yml/badge.svg)
+![build](https://github.com/fluktuid/gutenberg-downloader/actions/workflows/build.yml/badge.svg)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
 
 ## Usage
